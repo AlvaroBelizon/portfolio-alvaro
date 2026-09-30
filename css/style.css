@@ -519,29 +519,71 @@ nav a:hover {
 .certificaciones-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 18px;
 }
 
 .certificacion {
-    padding: 30px;
-    border: 1px solid #333;
+    min-height: 230px;
+    padding: 32px;
+
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+
+    background-color: var(--fondo);
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.3s;
+}
+
+.certificacion:hover {
+    transform: translateY(-4px);
+    border-color: var(--verde);
+    background-color: var(--fondo-secundario);
 }
 
 .certificacion span {
-    color: #555;
+    color: var(--verde);
     font-size: 12px;
+    font-weight: 600;
     letter-spacing: 2px;
 }
 
 .certificacion h3 {
-    margin-top: 30px;
+    margin-top: 32px;
+
+    color: var(--blanco);
     font-size: 22px;
     font-weight: 500;
 }
 
 .certificacion p {
     margin-top: 8px;
-    color: #888;
-    font-size: 15px;
+
+    color: var(--texto-oscuro);
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.certificacion-link {
+    width: fit-content;
+    margin-top: auto;
+    padding-top: 25px;
+
+    color: var(--verde);
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.certificacion-link:hover {
+    color: var(--verde-suave);
+    transform: translateX(5px);
 }
 /* =========================
    11. CONTACTO
